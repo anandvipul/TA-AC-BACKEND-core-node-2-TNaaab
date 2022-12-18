@@ -1,5 +1,6 @@
 let http = require('http')
 let url = require("url");
+let qs = require('querystring');
 
 http.createServer((req, res) => {
     let parsedUrl = url.parse(req.url);
@@ -10,7 +11,8 @@ http.createServer((req, res) => {
         });
         req.on("end", () => {
             res.statusCode = 201;
-            res.end(store);
+            
+            res.end(qs.parse(store)["captain"]);
         })
     }
 }).listen(4000, () => {
