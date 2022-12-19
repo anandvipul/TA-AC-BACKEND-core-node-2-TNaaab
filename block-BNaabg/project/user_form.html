@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Form</title>
+        <style>
+            body {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 2em;
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .table {
+                margin: 0 auto;
+            }
+            td {
+                padding: 0.5em;
+            }
+            input {
+                padding: 1rem;
+                font-size: 1.5em;
+                border-radius: 0.5rem;
+            }
+            div.submit {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <form action="/users" method="post">
+                <div class="table">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name">Name:
+                                </label>
+                            </td>
+                            <td><input type="text" name="name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">Email:
+                                </label>
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="username">Username:
+                                </label>
+                            </td>
+                            <td>
+                                <input type="text" name="username" id="username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="bio">Bio:</label>
+                            </td>
+                            <td><input type="text" name="bio" id="bio"></td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="submit">
+                    <label for="submit"><input type="submit" name="" id="submit" value="Submit"></label>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
